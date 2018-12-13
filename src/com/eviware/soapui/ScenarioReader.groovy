@@ -41,8 +41,8 @@ class ScenarioReader {
 
 // cfgSnippets -- A function for configuring all measurement templates to later be used in toMeasurementSets() and toMeasurements()
   public void cfgSnippets() {
-    this.addXSnippet('MSET_TEMPLATE', ' {"programName": "mips","category":"${category}","performanceStart":"${perf_start}","performanceEnd":"${perf_end}","submissionMethod": "${sub_method}","measurements":[${MEASUREMENTS}]}')
-    this.addXSnippet('2018_QUALITY_MSET_TEMPLATE', ' {"programName": "mips","category":"${category}","submissionMethod": "${sub_method}","measurements":[${MEASUREMENTS}]}')
+    this.addXSnippet('MSET_TEMPLATE', ' {"programName": "mips","providerId":"${provider_id}","category":"${category}","performanceStart":"${perf_start}","performanceEnd":"${perf_end}","submissionMethod": "${sub_method}","measurements":[${MEASUREMENTS}]}')
+    this.addXSnippet('2018_QUALITY_MSET_TEMPLATE', ' {"programName": "mips","providerId":"${provider_id}","category":"${category}","submissionMethod": "${sub_method}","measurements":[${MEASUREMENTS}]}')
     this.addXSnippet('NONPROP_MEASURE_TPL', '{"measureId": "${measure_id}","value": {"isEndToEndReported": ${end_to_end},"numerator": ${numerator},"denominator": ${denominator},"denominatorException": ${denominator_exc},"numeratorExclusion":${numerator_exc}}}')
     this.addXSnippet('2018_NONPROP_MEASURE_TPL', '{"measureId": "${measure_id}","performanceStart":"${perf_start}","performanceEnd":"${perf_end}","value": {"isEndToEndReported": ${end_to_end},"numerator": ${numerator},"denominator": ${denominator},"denominatorException": ${denominator_exc},"numeratorExclusion":${numerator_exc}}}')
     this.addXSnippet('SINGLE_MEASURE', '{"measureId":"${measure_id}","value":{"isEndToEndReported":${end_to_end},"performanceMet":${perf_met},"eligiblePopulationException":${perf_excep},"eligiblePopulationExclusion":${perf_exclu},"performanceNotMet":${perf_not_met},"eligiblePopulation":${pop_total}}}')
